@@ -48,6 +48,7 @@ class Queue {
         this.items = {};
         this.count = 0;
         this.lowestCount = 0;
+        return 'limpando fila...'
     }
 
     toString() {
@@ -66,14 +67,19 @@ class Queue {
 }
 
 const queue = new Queue();
+console.log(queue.isEmpty());
+queue.enqueue('John');
+queue.enqueue('Jack');
 
-queue.enqueue(5);
-queue.enqueue(8);
-queue.enqueue('teste');
-
-console.log(queue.items);
-console.log(queue.peek());
+console.log(queue.toString());
+queue.enqueue('Camila');
+// console.log(queue.items);
+// console.log(queue.peek());
 console.log(queue.size());
 console.log(queue.isEmpty());
+queue.dequeue();
+queue.dequeue();
+console.log(queue.toString());
 console.log(queue.clear());
+// queue.clear();
 console.log(queue.items);
